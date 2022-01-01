@@ -57,7 +57,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,243,1) 1
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 150px;
+        right: 100px;
         animation: loader 2s linear alternate;
 
         .tair-front {
@@ -107,7 +107,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,243,1) 1
         right: -300px;
     }
     to {
-        right: 150px;
+        right: 100px;
     }
 }
 

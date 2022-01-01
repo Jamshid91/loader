@@ -78,7 +78,7 @@ body {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 150px;
+  right: 100px;
   -webkit-animation: loader 2s linear alternate;
           animation: loader 2s linear alternate;
 }
@@ -141,7 +141,7 @@ body {
     right: -300px;
   }
   to {
-    right: 150px;
+    right: 100px;
   }
 }
 
@@ -150,7 +150,7 @@ body {
     right: -300px;
   }
   to {
-    right: 150px;
+    right: 100px;
   }
 }
 
