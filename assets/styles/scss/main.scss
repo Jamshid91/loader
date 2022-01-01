@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    height: 768px;
+    position: relative;
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,243,1) 100%, rgba(241,242,244,1) 100%);
+
+    &__title {
+        color: #2c3e50;
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    &-item {
+        display: flex;
+    }
+
+    &-left {
+        position: relative;
+        height: 768px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        .map {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    &-right {
+        width: 50%;
+    }
+
+    &-loader {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 150px;
+        animation: loader 2s linear alternate;
+
+        .tair-front {
+            position: absolute;
+            left: 178px;
+            bottom: 5px;
+            animation: tair 2s infinite linear;
+            animation-iteration-count: 1;
+        }
+        .tair-back {
+            position: absolute;
+            right: 27px;
+            bottom: 5px;
+            animation: tair 2s linear infinite;
+            animation-iteration-count: 1;
+        }
+    }
+    &__btn {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 60px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        color: white;
+        border: none;
+        background: rgb(52,73,94);
+        background: linear-gradient(90deg, rgba(52,73,94,1) 0%, rgba(127,140,141,1) 72%, rgba(127,140,141,1) 100%);
+        z-index: 0;
+        animation: button 3s alternate infinite steps(10);
+        z-index: 99;
+
+        &:hover {
+            animation: none;
+        }
+    }
+}
+
+
+@keyframes loader {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 150px;
+    }
+}
+
+@keyframes tair {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes button {
+    from {
+        background: rgb(52,73,94);
+        background: linear-gradient(90deg, rgba(52,73,94,1) 0%, rgba(127,140,141,1) 72%, rgba(127,140,141,1) 100%);
+    }
+    to {
+        background: rgb(127,140,141);
+        background: linear-gradient(90deg, rgba(127,140,141,1) 0%, rgba(126,139,140,1) 44%, rgba(127,140,141,1) 45%, rgba(52,73,94,1) 100%);
+    }
+}
